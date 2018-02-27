@@ -1,4 +1,4 @@
-package lv.javaguru.java2;
+package lv.cigunweb.java2;
 
 import org.junit.Test;
 
