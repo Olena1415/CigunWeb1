@@ -1,49 +1,38 @@
+import java.util.ArrayList;
+
 public class D {
 
 
     public static void main(String[] args) {
-        // int month = Integer.parseInt(args[0]);
-        // int day = Integer.parseInt(args[1]);
-        int month =3;
-        int day =76;
+        for (int a = 1; a < 12; a++) {
 
-        if      ((month == 12 && day >= 22 && day <= 31) || (month ==  1 && day >= 1 && day <= 19))
-            System.out.println("Capricorn");
-        else if ((month ==  1 && day >= 20 && day <= 31) || (month ==  2 && day >= 1 && day <= 17))
-            System.out.println("Aquarius");
-        else if ((month ==  2 && day >= 18 && day <= 29) || (month ==  3 && day >= 1 && day <= 19))
-            System.out.println("Pisces");
-        else if ((month ==  3 && day >= 20 && day <= 31) || (month ==  4 && day >= 1 && day <= 19))
-            System.out.println("Aries");
-        else if ((month ==  4 && day >= 20 && day <= 30) || (month ==  5 && day >= 1 && day <= 20))
-            System.out.println("Taurus");
-        else if ((month ==  5 && day >= 21 && day <= 31) || (month ==  6 && day >= 1 && day <= 20))
-            System.out.println("Gemini");
-        else if ((month ==  6 && day >= 21 && day <= 30) || (month ==  7 && day >= 1 && day <= 22))
-            System.out.println("Cancer");
-        else if ((month ==  7 && day >= 23 && day <= 31) || (month ==  8 && day >= 1 && day <= 22))
-            System.out.println("Leo");
-        else if ((month ==  8 && day >= 23 && day <= 31) || (month ==  9 && day >= 1 && day <= 22))
-            System.out.println("Virgo");
-        else if ((month ==  9 && day >= 23 && day <= 30) || (month == 10 && day >= 1 && day <= 22))
-            System.out.println("Libra");
-        else if ((month == 10 && day >= 23 && day <= 31) || (month == 11 && day >= 1 && day <= 21))
-            System.out.println("Scorpio");
-        else if ((month == 11 && day >= 22 && day <= 30) || (month == 12 && day >= 1 && day <= 21))
-            System.out.println("Sagittarius");
-        else
-            System.out.println("Illegal date");
+            ArrayList<Integer> ar = new ArrayList<>();
+            for (int i = a; i > 0; i--) {
+                int b = a % i;
+                if (b == 0) {
+                    ar.add(i);
+                }
+            }
+            int m = 1;
 
+            for (Integer ir : ar) {
+                m = m + ir;
+            }
+            if (2 * a <= m) {
+                System.out.println(a);
+            }
+
+        }
 
 
     }
-
-
-
-
-
-
 }
+
+
+
+
+
+
 
 
 
